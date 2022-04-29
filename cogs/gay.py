@@ -8,17 +8,24 @@ class Gay(commands.Cog):
 
     @commands.command()
     async def gay(self, ctx):
-        button = Button(label="YEAH!!!", style=discord.ButtonStyle.green)
+        view = View()
+
+        button = Button(label="YEAH!!!", style=discord.ButtonStyle.green, disabled=False)
         button2 = Button(label="Nah, maybe later.", style=discord.ButtonStyle.red)
 
-        async def button_callback(interaction):
-            await interaction.response.send_message("@everyone")
+        async def yes_callback(interaction):
+            # button.label = 'allah'
+            # button.disabled = True                                            # funktioniert noch nicht
+            # await interaction.response.edit_message(view=self)
+            await interaction.response.send_message('@everyone')
+        
+        async def no_callback(interaction):
+            await interaction.response.send_message("ok i wont do that lol")
 
-        button.callback = button_callback
-        button2.callback = button_callback
-        view = View()
+        button.callback = yes_callback
+        button2.callback = no_callback
+        
         view.add_item(button2)
-        await ctx.send("So you are gay?", view=view)
         view.add_item(button)
         await ctx.send("Do You realy want to Ping everyone?", view=view)
 
