@@ -1,4 +1,5 @@
 import discord
+import os
 from discord.ext import commands
 
 class Report(commands.Cog):
@@ -13,9 +14,9 @@ class Report(commands.Cog):
         if report is None:
             return await ctx.reply("Bitte erklär den grund für den Report.")
         else:
-            embed = discord.Embed(title="Report", description=f"{ctx.author.mention}hat {member} Reportet", color=0xE74C3C)
+            embed = discord.Embed(title="Report", description=f"{ctx.author.mention} hat {member} Reportet", color=0xE74C3C)
             embed.set_thumbnail(url="")
-            embed.add_field(name="Weitere Infos:", value=f'{report}')
+            embed.add_field(name="Report grund:", value=f'{report}')
             embed.set_footer(text=f'Reagiere mit 😪 wenn die Situation sich gekläret hat. LOL.')
             report_message = await report_channel.send(embed=embed)
             await report_message.add_reaction('😪')
@@ -28,7 +29,8 @@ class Report(commands.Cog):
                 reaction, user = await commands.wait_for('raction_add', timeout=604800, check=check)
 
                 if str(reaction.emoji) == '😪':
-                    await ctx.author.send('Ihre Report wurde geprüft und gelöscht')
+                    await ctx.send(f'Der Report von {ctx.author.mention} hat sich geklärt.')
+                    await print("HEHE")
 
             except Exception as e:
                 print(e)
