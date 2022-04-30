@@ -21,6 +21,7 @@ class Gay(commands.Cog):
         
         async def no_callback(interaction):
             await interaction.response.send_message("ok i wont do that lol")
+            await ctx.send('hehe')
 
         button.callback = yes_callback
         button2.callback = no_callback
