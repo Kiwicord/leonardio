@@ -3,8 +3,17 @@ import discord
 import os
 from discord.ext import commands
   
-client = commands.Bot(command_prefix=';', intents=discord.Intents.default())
+client = commands.Bot(command_prefix=';', intents=discord.Intents.default(), help_command=help())
 client.remove_command("help")
+
+class Help(commands.HelpCommand):
+  
+  def __init__(self):
+      super().__init__()
+    
+  async def send_bot_help(self, mapping):
+    for cog in mapping:
+      await self.get_destination().send(f'{cog.qualified_name}: {[command.name for command in mapping[cog]]}')
 
 @client.event
 async def on_ready():
@@ -22,7 +31,7 @@ async def load(ctx, extension):
     client.load_extension(f'cogs.{extension}')
     await ctx.reply(f'**{extension} Cock** wurde geladen')
 
-for filename in os.listdir("leonardio\cogs"):
+for filename in os.listdir(".\cogs"):
     if filename.endswith(".py"):
       client.load_extension(f"cogs.{filename[:-3]}")
     
