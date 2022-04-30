@@ -22,7 +22,7 @@ async def load(ctx, extension):
     client.load_extension(f'cogs.{extension}')
     await ctx.reply(f'**{extension} Cock** wurde geladen')
 
-for filename in os.listdir(".\cogs"):
+for filename in os.listdir("leonardio\cogs"):
     if filename.endswith(".py"):
       client.load_extension(f"cogs.{filename[:-3]}")
     
