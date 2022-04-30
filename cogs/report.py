@@ -6,7 +6,7 @@ class Report(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-    @commands.command()
+    @commands.command(aliases=['r'])
     async def report(self, ctx, member:discord.Member, *, report=None):
         report_channel = discord.utils.get(ctx.guild.channels, name = 'reports')
         if member is None:
