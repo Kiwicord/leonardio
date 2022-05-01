@@ -3,10 +3,10 @@ import discord
 import os
 from discord.ext import commands
   
-client = commands.Bot(command_prefix=';', intents=discord.Intents.default(), help_command=help())
+client = commands.Bot(command_prefix=';', intents=discord.Intents.default(), help_command=commands.HelpCommand())
 client.remove_command("help")
 
-class Help(commands.HelpCommand):
+class HelpCmdLol(commands.HelpCommand):
   
   def __init__(self):
       super().__init__()
@@ -21,7 +21,7 @@ async def on_ready():
 
 @client.command()
 async def unload(ctx, extension):
-  if ctx.author.id == 712341730480881707:
+  if ctx.author.id == 712341730480881707 or 733403498766401554:
     client.unload_extension(f'cogs.{extension}')
     await ctx.reply(f'**{extension} Cock** wurde entladen')
 
