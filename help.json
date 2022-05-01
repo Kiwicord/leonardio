@@ -1,5 +1,12 @@
 {
-    "OMG" : "HEHEHEHEHE",
-    "test" : "test",
-    "test2" : "test2"
+    "help" : "Zeigt diese Liste an. UWU",
+    "8ball [Question]" : "8ball Kommand",
+    "ban [member] ([reason])" : "Ban Kommand",
+    "kick [member ([reason])" : "Kick Kommand",
+    "clear [amount]" : "Clear Chat",
+    "gay" : "Secret Message",
+    "jasonisttoll" : "LOLLI POP",
+    "report [member] [reason]" : "Reportet jemanden der scheisse macht",
+    "load [cock]" : "Ladet einen Cock",
+    "undload [cock]" : "Entlaedt meinen Cock. LOL"
 }
