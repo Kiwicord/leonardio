@@ -15,7 +15,7 @@ class Help(commands.Cog):
         data = json.load(open('help.json'))
         for key, value in data.items():
             embed.add_field(name=key, value=value, inline=False)
-            await ctx.reply(embed=embed)
+        await ctx.reply(embed=embed)
 
 
 def setup(client):
