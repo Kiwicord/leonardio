@@ -8,11 +8,11 @@ class Help(commands.Cog):
 
     @commands.command()
     async def help(self, ctx):
-        with open("leonardio\help.json") as f:
+        with open("help.json") as f:
             data = json.load(f)
         embed = discord.Embed(title="Leeeenard | Help Menüüü\nPrefix: ';'", description="Alle Commands", color=0xE74C3C)
         embed.set_footer(text=f'Erfragt von {ctx.author.name} | Leeeenard')
-        data = json.load(open('leonardio\help.json'))
+        data = json.load(open('help.json'))
         for key, value in data.items():
             embed.add_field(name=key, value=value, inline=False)
             await ctx.reply(embed=embed)
