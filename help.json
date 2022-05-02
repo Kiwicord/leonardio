@@ -2,7 +2,7 @@
     "help" : "Zeigt diese Liste an. UWU",
     "8ball [Question]" : "8ball Kommand",
     "ban [member] ([reason])" : "Ban Kommand",
-    "kick [member ([reason])" : "Kick Kommand",
+    "kick [member] ([reason])" : "Kick Kommand",
     "clear [amount]" : "Clear Chat",
     "gay" : "Secret Message",
     "jasonisttoll" : "LOLLI POP",
