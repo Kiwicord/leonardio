@@ -3,7 +3,7 @@ import discord
 import os
 from discord.ext import commands
   
-client = commands.Bot(command_prefix=';', intents=discord.Intents.default(), help_command=commands.HelpCommand())
+client = commands.Bot(command_prefix=';', intents = discord.Intents.default(), help_command=commands.HelpCommand())
 client.remove_command("help")
 
 class HelpCmdLol(commands.HelpCommand):
