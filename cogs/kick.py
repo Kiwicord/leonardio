@@ -7,8 +7,9 @@ class Kick(commands.Cog):
 
     @commands.command()
     async def kick(self, ctx, member : discord.Member, *, reason=None):
-        await member.kick(reason=reason)
-        await ctx.reply(f'{member.mention} wurde von diesem Server gekickt')
+        if ctx.author.id == 712341730480881707:
+            await member.kick(reason=reason)
+            await ctx.reply(f'{member.mention} wurde von diesem Server gekickt')
 
 def setup(client):
     client.add_cog(Kick(client))

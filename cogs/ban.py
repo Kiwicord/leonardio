@@ -7,8 +7,9 @@ class Ban(commands.Cog):
 
     @commands.command()
     async def ban(self, ctx, member : discord.Member, *, reason=None):
-        await member.ban(reason=reason)
-        await ctx.reply(f'{member.mention} wurde von diesem Server gebannt')
+        if ctx.author.id == 712341730480881707:
+            await member.ban(reason=reason)
+            await ctx.reply(f'{member.mention} wurde von diesem Server gebannt')
 
 def setup(client):
     client.add_cog(Ban(client))

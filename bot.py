@@ -21,7 +21,7 @@ async def on_ready():
 
 @client.command()
 async def unload(ctx, extension):
-  if ctx.author.id == 712341730480881707 or 733403498766401554:
+  if ctx.author.id == 712341730480881707:
     client.unload_extension(f'cogs.{extension}')
     await ctx.reply(f'**{extension} Cock** wurde entladen')
 
