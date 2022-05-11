@@ -2,6 +2,16 @@ import random
 import discord
 import os
 from discord.ext import commands
+
+from cogs.ball import Ball
+from cogs.ban import Ban
+from cogs.clear import Clear
+from cogs.error import CommandErrorHandler
+from cogs.gay import Gay
+from cogs.help import HelpCommand
+from cogs.jasonisttoll import Jason
+from cogs.kick import Kick
+from cogs.report import Report
   
 client = commands.Bot(command_prefix=';', intents = discord.Intents.default(), help_command=commands.HelpCommand())
 client.remove_command("help")
@@ -31,8 +41,17 @@ async def load(ctx, extension):
     client.load_extension(f'cogs.{extension}')
     await ctx.reply(f'**{extension} Cock** wurde geladen')
 
-for filename in os.listdir(".\app\cogs"):
-    if filename.endswith(".py"):
-      client.load_extension(f"cogs.{filename[:-3]}")
+async def setup():
+  await client.wait_until_ready()
+  client.add_cog(Ball(client))
+  client.add_cog(Ban(client))
+  client.add_cog(Clear(client))
+  client.add_cog(CommandErrorHandler(client))
+  client.add_cog(Gay(client))
+  client.add_cog(HelpCommand(client))
+  client.add_cog(Jason(client))
+  client.add_cog(Kick(client))
+  client.add_cog(Report(client))
+
     
 client.run('OTY4ODY0NDgxMDI1MzU5OTUy.YmlDXA.8RHND8yc6t607EVU_3KpVjN3StU')
