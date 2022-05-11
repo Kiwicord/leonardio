@@ -3,15 +3,15 @@ import discord
 import os
 from discord.ext import commands
 
-from cogs.ball import Ball
-from cogs.ban import Ban
-from cogs.clear import Clear
-from cogs.error import CommandErrorHandler
-from cogs.gay import Gay
-from cogs.help import HelpCommand
-from cogs.jasonisttoll import Jason
-from cogs.kick import Kick
-from cogs.report import Report
+from commands.ball import Ball
+from commands.ban import Ban
+from commands.clear import Clear
+from commands.error import CommandErrorHandler
+from commands.gay import Gay
+from commands.help import HelpCommand
+from commands.jasonisttoll import Jason
+from commands.kick import Kick
+from commands.report import Report
   
 client = commands.Bot(command_prefix=';', intents = discord.Intents.default(), help_command=commands.HelpCommand())
 client.remove_command("help")
@@ -38,7 +38,7 @@ async def unload(ctx, extension):
 @client.command()
 async def load(ctx, extension):
   if ctx.author.id == 712341730480881707:
-    client.load_extension(f'cogs.{extension}')
+    client.load_extension(f'commands.{extension}')
     await ctx.reply(f'**{extension} Cock** wurde geladen')
 
 async def setup():
