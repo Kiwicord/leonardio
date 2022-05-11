@@ -17,7 +17,7 @@ class HelpCmdLol(commands.HelpCommand):
 
 @client.event
 async def on_ready():
-  print('Bot ist gestartet!!!!!!!!!!!!')
+  print('Bot ist gestartet!!!!!!!!')
 
 @client.command()
 async def unload(ctx, extension):
