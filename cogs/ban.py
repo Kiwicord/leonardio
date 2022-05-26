@@ -24,7 +24,7 @@ class Ban(commands.Cog):
             error = discord.Embed(color=0xE74C3C, title=f'Du kannst dich selber nicht bannen!')
             await ctx.send(embed=error)
             return
-        embed1 = discord.Embed(color=0xE74C3C, title='Gebannt!', description=f'Der Member {member.mention} wurde von {ctx.author.mention} gebannt.')
+        embed1 = discord.Embed(color=0xE74C3C, title='Gebannt!', description=f'Der Member {member.mention} wurde von {ctx.author.mention} gebannt. Grund: {reason}')
         await member.ban(reason=reason)
         await ctx.reply(embed=embed1, mention_author=False)
 

@@ -28,7 +28,7 @@ async def unload(ctx, extension):
 @client.command()
 async def load(ctx, extension):
   if ctx.author.id == 712341730480881707:
-    client.load_extension(f'commands.{extension}')
+    client.load_extension(f'cogs.{extension}')
     await ctx.reply(f'**{extension} Cock** wurde geladen')
 
 for filename in os.listdir(".\cogs"):

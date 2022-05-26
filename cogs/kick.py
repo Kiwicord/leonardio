@@ -7,7 +7,7 @@ class Kick(commands.Cog):
 
     @commands.command()
     async def kick(self, ctx, member : discord.Member, *, reason=None):
-        if ctx.author.id == 712341730480881707:
+        if ctx.author.id == 745717254678904862:
             await member.kick(reason=reason)
             await ctx.reply(f'{member.mention} wurde von diesem Server gekickt')
 
