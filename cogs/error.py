@@ -10,7 +10,7 @@ class CommandErrorHandler(commands.Cog):
     async def on_command_error(self, ctx, error):
         embed = discord.Embed(title="Fehler!", color=0xE74C3C, description=f"```{error}```")
         embed.set_footer(text="Um den Fehler zu reporten, wende dich bitte an das Serverteam.")
-        await ctx.send(embed=embed, mention_author=False)
+        await ctx.reply(embed=embed, mention_author=False)
 
 def setup(client):
     client.add_cog(CommandErrorHandler(client)) 

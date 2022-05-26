@@ -1,0 +1,8 @@
+{
+    "play [link/suche]" : "Spielt ein Lied ab",
+    "skip" : "Skipt einen Song",
+    "stop" : "Stopt den momentanen Song",
+    "seek [d]d [h]h [m]m [s]s" : "Skipt Lied zur gewünschten Stelle",
+    "pause" : "Pausiert das Lied",
+    "queue" : "Zeigt die Warteschlanger der Lieder an"
+}
