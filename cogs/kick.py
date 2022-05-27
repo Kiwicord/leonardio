@@ -7,13 +7,18 @@ class Kick(commands.Cog):
 
     @commands.command()
     async def kick(self, ctx, member : discord.Member, *, reason=None):
-        if ctx.author.id == 745717254678904862:
 
-            guild = ctx.guil
-        
-            await member.kick(reason=reason)
-            await ctx.reply(f'{member.mention} wurde von diesem Server gekickt')
+        if ctx.author.id == 977993035717681252:
+            guild = ctx.guild
+
             await member.send(f'Du wurdest von **{guild.name}** geckickt | Grund: **{reason}**')
+            await member.kick(reason=reason)
+            embed1 = discord.Embed(color=0xE74C3C, title='Geckickt!', description=f'Der Member {member.mention} wurde von {ctx.author.mention} Geckickt. Grund: {reason}')
+            await ctx.reply(embed=embed1, mention_author=False)
+        else:
+            error = discord.Embed(color=0xE74C3C, title=f'Stop!', description=f'Du kannst {member.mention} nicht kicken! DU MONG DB')
+            await ctx.send(embed=error)
+            return
 
 def setup(client):
     client.add_cog(Kick(client))
