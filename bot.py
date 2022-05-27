@@ -6,15 +6,6 @@ from discord.ext import commands
 client = commands.Bot(command_prefix=';', intents = discord.Intents.default(), help_command=commands.HelpCommand())
 client.remove_command("help")
 
-class HelpCmdLol(commands.HelpCommand):
-  
-  def __init__(self):
-      super().__init__()
-    
-  async def send_bot_help(self, mapping):
-    for cog in mapping:
-      await self.get_destination().send(f'{cog.qualified_name}: {[command.name for command in mapping[cog]]}')
-
 @client.event
 async def on_ready():
   print('Bot ist gestartet!!!!!!!!')

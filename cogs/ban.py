@@ -8,7 +8,9 @@ class Ban(commands.Cog):
     @commands.command()
     @commands.has_permissions(ban_members=True)
     async def ban(self, ctx, member: discord.Member=None, *, reason='Kein Grund angegeben'):
-        role = discord.utils.find(lambda r: r.name == '│📋 × Moderator', ctx.message.guild.roles)
+        role = discord.utils.find(lambda r: r.name == 'Leeenard', ctx.message.guild.roles)
+
+        guild = ctx.guil
 
         if member is None:
             error = discord.Embed(color=0xE74C3C, title=f'Gib den User an der gebannt werden soll!')
@@ -27,6 +29,7 @@ class Ban(commands.Cog):
         embed1 = discord.Embed(color=0xE74C3C, title='Gebannt!', description=f'Der Member {member.mention} wurde von {ctx.author.mention} gebannt. Grund: {reason}')
         await member.ban(reason=reason)
         await ctx.reply(embed=embed1, mention_author=False)
+        await member.send(f'Du wurdest von **{guild.name}** gebannnt | Grund: **{reason}**')
 
 def setup(client):
     client.add_cog(Ban(client))
