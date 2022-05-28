@@ -8,7 +8,7 @@ client.remove_command("help")
 
 @client.event
 async def on_ready():
-  print('Bot ist gestartet!!!!!!!!')
+  print('Logged in as:\n{0.user.name}\n{0.user.id}'.format(client))
 
 @client.command()
 async def unload(ctx, extension):
