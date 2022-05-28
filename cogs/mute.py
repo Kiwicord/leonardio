@@ -17,7 +17,7 @@ class Mute(commands.Cog):
             await member.timeout(until = discord.utils.utcnow() + timedelta(seconds=time), reason=reason)
             embed1 = discord.Embed(color=0xE74C3C, title='Gemutet!', description=f'Der Member {member.mention} wurde von {ctx.author.mention} für {time} sekunden Gemutet. Grund: **{reason}**')
             await ctx.reply(embed=embed1, mention_author=False)
-            embed4 = discord.Embed(title='Gemutet', description=f'Du wurdest auf **{guild.name}** für {time} sekunden gemutet. | Grund: **{reason}**', color=0xE74C3C)
+            embed4 = discord.Embed(title='Gemutet!', description=f'Du wurdest auf **{guild.name}** für {time} sekunden gemutet! | Grund: **{reason}**', color=0xE74C3C)
             await member.send(embed=embed4)
         else:
             error = discord.Embed(color=0xE74C3C, title=f'Stop!', description=f'Du kannst {member.mention} nicht muten! DU MONG DB')
