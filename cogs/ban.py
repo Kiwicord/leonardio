@@ -13,11 +13,37 @@ class Ban(commands.Cog):
 
         if ctx.author.id == 977993035717681252:
             embed1 = discord.Embed(color=0xE74C3C, title='Gebannt!', description=f'Der Member {member.mention} wurde von {ctx.author.mention} gebannt. Grund: {reason}')
-            await member.send(f'Du wurdest von **{guild.name}** gebannnt | Grund: **{reason}**')
+            embed2 = discord.Embed(color=0xE74C3C, title='Gebannt!', description=f'Du wurdest von **{guild.name}** gebannnt | Grund: **{reason}**')
+            await member.send(embed=embed2)
             await member.ban(reason=reason)
             await ctx.reply(embed=embed1, mention_author=False)
         else:
             error = discord.Embed(color=0xE74C3C, title=f'Stop!', description=f'Du kannst {member.mention} nicht bannen! DU MONG DB')
+            await ctx.send(embed=error)
+            return
+    
+    @commands.command()
+    async def unban(self, ctx, *, member):
+        guild = ctx.guild
+
+        if ctx.author.id == 977993035717681252:
+            banned_users = await ctx.guild.bans()
+            member_name, member_discriminator = member.split('#')
+
+            for ban_entry in banned_users:
+                user = ban_entry.user
+
+                if (user.name, user.discriminator) == (member_name, member_discriminator):
+                    await ctx.guild.unban(user)
+                    embed3 = discord.Embed(color=0xE74C3C, title='Entbannt!', description=f'Der Member {member.mention} wurde von {ctx.author.mention} entbannt.')
+                    embed4 = discord.Embed(color=0xE74C3C, title='Entbannt!', description=f'Du wurdest von **{guild.name}** entbannt.')
+                    await ctx.reply(embed=embed3)
+                    await member.send(embed=embed4)
+                    return
+
+
+        else:
+            error = discord.Embed(color=0xE74C3C, title=f'Stop!', description=f'Du kannst {member.mention} nicht entbannen! DU MONG DB')
             await ctx.send(embed=error)
             return
 

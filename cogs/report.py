@@ -8,6 +8,7 @@ class Report(commands.Cog):
 
     @commands.command(aliases=['r'])
     async def report(self, ctx, member:discord.Member, *, report=None):
+        guild = ctx.guild
         report_channel = discord.utils.get(ctx.guild.channels, name = 'reports')
         if member is None:
             return await ctx.reply("Bitte sag wenn du Reporten möchtest.")
@@ -22,7 +23,7 @@ class Report(commands.Cog):
             await report_message.add_reaction('😪')
             await report_message.add_reaction('❌')
             embed2 = discord.Embed(title='Report', description=f'{ctx.author.mention} Dein Report wurde zu dem Team geschickt.', color=0xE74C3C)
-            embed5 = discord.Embed(title='Report', description=f'{member} wurde von {ctx.author.mention} wegen {report} Reportet.', color=0xE74C3C)
+            embed5 = discord.Embed(title='Report', description=f'{member} wurde auf {guild.name} von {ctx.author.mention} wegen {report} Reportet.', color=0xE74C3C)
             await ctx.send(embed=embed2)
             await member.send(embed=embed5)
 
@@ -33,7 +34,7 @@ class Report(commands.Cog):
                 reaction, user = await self.client.wait_for('reaction_add', check=check)
                 if str(reaction.emoji) == '😪':
                     embed3 = discord.Embed(title='Report', description=f'Der Report von {ctx.author.mention} hat sich geklärt.', color=0xE74C3C)
-                    embed4 = discord.Embed(title='Report', description=f'Der Report, von {ctx.author.mention} über {member} hat sich geklärt.', color=0xE74C3C)
+                    embed4 = discord.Embed(title='Report', description=f'Der Report auf {guild.name} von {ctx.author.mention} über {member} hat sich geklärt.', color=0xE74C3C)
                 if str(reaction.emoji) == '❌':
                     embed6 = discord.Embed(title='Report', description=f'{member} wurde von {ctx.author.mention} wegen {report} Gebannt.', color=0xE74C3C)
                     await member.send(embed=embed6)
