@@ -14,13 +14,13 @@ async def on_ready():
 async def unload(ctx, extension):
   if ctx.author.id == 712341730480881707:
     client.unload_extension(f'cogs.{extension}')
-    await ctx.reply(f'**{extension} Cock** wurde entladen')
+    await ctx.reply(f'**{extension} Cock** wurde entladen.')
 
 @client.command()
 async def load(ctx, extension):
   if ctx.author.id == 712341730480881707:
     client.load_extension(f'cogs.{extension}')
-    await ctx.reply(f'**{extension} Cock** wurde geladen')
+    await ctx.reply(f'**{extension} Cock** wurde geladen.')
 
 for filename in os.listdir(".\cogs"):
     if filename.endswith(".py"):
