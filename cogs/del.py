@@ -75,11 +75,5 @@ class Del(commands.Cog):
             if msg.find('UWU') != -1:
                 await message.delete()
                 return
-            if msg.find('Amogus') != -1:
-                await message.delete()
-                return
-            if msg.find('amogus') != -1:
-                await message.delete()
-                return
 def setup(client):
     client.add_cog(Del(client))
