@@ -6,11 +6,11 @@ class DmMsg(commands.Cog):
         self.client = client
 
     @commands.command()
-    async def msg(self, ctx, member:discord.Member, *, reason=None):
+    async def msg(self, ctx, member:discord.Member, *, msg=None):
         embed1 = discord.Embed(title='**MSG**', description=f'Narchicht wurde an **{member}** gesendet.', color=0xE74C3C)
-        embed1.add_field(name="MSG:", value=f"{reason}")
+        embed1.add_field(name="MSG:", value=f"{msg}")
         embed2 = discord.Embed(title='**MSG**', description=f'MSG von **{member.mention}**:', color=0xE74C3C)
-        embed2.add_field(name="MSG:", value=f"{reason}")
+        embed2.add_field(name="MSG:", value=f"{msg}")
         await ctx.reply(embed=embed1)
         await member.send(embed=embed2)
 
