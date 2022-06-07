@@ -7,73 +7,9 @@ class Del(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
+        bad_words = ['fuck', 'pay day']
         msg = message.content
-        for word in msg:
-            if msg.find('fuck') != -1:
-                await message.delete()
-                return 
-            if msg.find('Fuck') != -1:
-                await message.delete()
-                return 
-            if msg.find('Ficken') != -1:
-                await message.delete()
-                return 
-            if msg.find('ficken') != -1:
-                await message.delete()
-                return 
-            if msg.find('payday?') != -1:
-                await message.delete()
-                return
-            if msg.find('Payday?') != -1:
-                await message.delete()
-                return
-            if msg.find('payday') != -1:
-                await message.delete()
-                return
-            if msg.find('Payday') != -1:
-                await message.delete()
-                return
-            if msg.find('Pay Day?') != -1:
-                await message.delete()
-                return
-            if msg.find('Pay day') != -1:
-                await message.delete()
-                return
-            if msg.find('pay day?') != -1:
-                await message.delete()
-                return
-            if msg.find('pay day') != -1:
-                await message.delete()
-                return
-            if msg.find('PAYDAY') != -1:
-                await message.delete()
-                return
-            if msg.find('PAY DAY') != -1:
-                await message.delete()
-                return
-            if msg.find('uwu') != -1:
-                await message.delete()
-                return
-            if msg.find('Uwu') != -1:
-                await message.delete()
-                return
-            if msg.find('uWu') != -1:
-                await message.delete()
-                return
-            if msg.find('uwU') != -1:
-                await message.delete()
-                return
-            if msg.find('UWu') != -1:
-                await message.delete()
-                return
-            if msg.find('UwU') != -1:
-                await message.delete()
-                return
-            if msg.find('uWU') != -1:
-                await message.delete()
-                return
-            if msg.find('UWU') != -1:
-                await message.delete()
-                return
+        if msg in bad_words:
+            await message.delete()
 def setup(client):
     client.add_cog(Del(client))
