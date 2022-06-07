@@ -22,7 +22,7 @@ instaloader==4.9
 mongoose==0.0.1
 pafy==0.5.5
 pefile==2021.9.3
-py-cord==2.0.0b1
+py-cord==2.0.0rc1
 pycparser==2.21
 pyinstaller==5.1
 pyinstaller-hooks-contrib==2022.6
