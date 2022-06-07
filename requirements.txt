@@ -3,7 +3,6 @@ aiohttp==3.6.0
 aiosignal==1.2.0
 altgraph==0.17.2
 antiorm==1.2.1
-async-timeout==4.0.0
 asyncio==3.4.3
 attrs==21.4.0
 certifi==2022.5.18.1
