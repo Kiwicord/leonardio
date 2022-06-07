@@ -1,2 +1,2 @@
-heroku ps:scale worker=1
+web: gunicorn leeeeenard.wsgi
 worker: python bot.py
