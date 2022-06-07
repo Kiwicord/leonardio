@@ -8,7 +8,7 @@ asyncio==3.4.3
 attrs==21.4.0
 certifi==2022.5.18.1
 cffi==1.15.0
-chardet==2.0
+chardet==2.0.0
 charset-normalizer==2.0.12
 colorama==0.4.4
 DateTime==4.4
