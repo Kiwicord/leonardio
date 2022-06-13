@@ -11,5 +11,6 @@ class Del(commands.Cog):
         msg = message.content
         if msg in bad_words:
             await message.delete()
+
 def setup(client):
     client.add_cog(Del(client))

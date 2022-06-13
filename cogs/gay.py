@@ -6,6 +6,7 @@ class Gay(commands.Cog):
     def __init__(self, client):
         self.client = client
 
+    @commands.has_permissions(ban_members=True)
     @commands.command()
     async def gay(self, ctx):
         view = View()
@@ -14,14 +15,16 @@ class Gay(commands.Cog):
         button2 = Button(label="Nah, maybe later.", style=discord.ButtonStyle.red)
 
         async def yes_callback(interaction):
-            # button.label = 'allah'
-            # button.disabled = True                                            # funktioniert noch nicht
-            # await interaction.response.edit_message(view=self)
-            await interaction.response.send_message('@everyone')
+            #while True:  
+            #    for channel in ctx.guild.text_channels:
+            #        await channel.send('@everyone')
+            await ctx.send('@everyone')
+            return
         
         async def no_callback(interaction):
             await interaction.response.send_message("ok i wont do that lol")
             await ctx.send('hehe')
+            return
 
         button.callback = yes_callback
         button2.callback = no_callback

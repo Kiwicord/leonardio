@@ -8,9 +8,10 @@ class Mute(commands.Cog):
     def __init__(self, client):
         self.client = client
 
+    @commands.has_permissions(administrator=True)
     @commands.command()
     async def mute(self, ctx, member : discord.Member=None, time=None, *, reason=None):
-        if ctx.author.id == 977993035717681252:
+        if member:
             guild = ctx.guild
 
             time = humanfriendly.parse_timespan(time)
@@ -24,10 +25,11 @@ class Mute(commands.Cog):
             await ctx.send(embed=error)
             return
     
+    @commands.has_permissions(administrator=True)
     @commands.command()
     async def unmute(self, ctx, member : discord.Member=None, time=None):
 
-        if ctx.author.id == 977993035717681252:
+        if member:
             guild = ctx.guild
 
             await member.timeout(until = None)

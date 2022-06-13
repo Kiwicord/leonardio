@@ -5,13 +5,13 @@ class Ban(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-    @commands.command()
     @commands.has_permissions(ban_members=True)
+    @commands.command()
     async def ban(self, ctx, member: discord.Member, *, reason='Kein Grund angegeben'):
 
         guild = ctx.guild
 
-        if ctx.author.id == 977993035717681252:
+        if member:
             embed1 = discord.Embed(color=0xE74C3C, title='Gebannt!', description=f'Der Member {member.mention} wurde von {ctx.author.mention} gebannt. Grund: {reason}')
             embed2 = discord.Embed(color=0xE74C3C, title='Gebannt!', description=f'Du wurdest von **{guild.name}** gebannnt | Grund: **{reason}**')
             await member.send(embed=embed2)
@@ -21,12 +21,13 @@ class Ban(commands.Cog):
             error = discord.Embed(color=0xE74C3C, title=f'Stop!', description=f'Du kannst {member.mention} nicht bannen! DU MONG DB')
             await ctx.send(embed=error)
             return
-    
+
+    @commands.has_permissions(ban_members=True) 
     @commands.command()
     async def unban(self, ctx, *, member):
         guild = ctx.guild
 
-        if ctx.author.id == 977993035717681252:
+        if member:
             banned_users = await ctx.guild.bans()
             member_name, member_discriminator = member.split('#')
 

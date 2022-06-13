@@ -5,10 +5,11 @@ class Kick(commands.Cog):
     def __init__(self, client):
         self.client = client
 
+    @commands.has_permissions(ban_members=True)
     @commands.command()
     async def kick(self, ctx, member : discord.Member, *, reason=None):
 
-        if ctx.author.id == 977993035717681252:
+        if member:
             guild = ctx.guild
 
             await member.send(f'Du wurdest von **{guild.name}** geckickt | Grund: **{reason}**')
