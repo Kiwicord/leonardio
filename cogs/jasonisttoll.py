@@ -11,6 +11,7 @@ class Jason(commands.Cog):
             await ctx.reply('Nah u are not')
         else:
             await ctx.reply('Yeah he is realy nice. LOL')
+        print(f'{ctx.author.display_name} hat jasonisttoll ausgefürt.')
 
 def setup(client):
     client.add_cog(Jason(client))

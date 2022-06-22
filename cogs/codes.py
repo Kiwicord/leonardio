@@ -8,6 +8,7 @@ class Codes(commands.Cog):
 
     @commands.command()
     async def codes(self, ctx):
+        print(f'{ctx.author.display_name} hat codes ausgefürt.')
         responses = [
         '253119',
         '289015',

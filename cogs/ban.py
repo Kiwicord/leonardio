@@ -8,6 +8,7 @@ class Ban(commands.Cog):
     @commands.has_permissions(ban_members=True)
     @commands.command()
     async def ban(self, ctx, member: discord.Member, *, reason='Kein Grund angegeben'):
+        print(f'{ctx.author.display_name} hat ban ausgefürt.')
 
         guild = ctx.guild
 
@@ -25,6 +26,8 @@ class Ban(commands.Cog):
     @commands.has_permissions(ban_members=True) 
     @commands.command()
     async def unban(self, ctx, *, member):
+        print(f'{ctx.author.display_name} hat unban ausgefürt.')
+
         guild = ctx.guild
 
         if member:

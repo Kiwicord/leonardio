@@ -8,6 +8,7 @@ class Clear(commands.Cog):
     @commands.has_permissions(ban_members=True)
     @commands.command(aliases=['purge', 'p'])
     async def clear(self, ctx, amount : int):
+        print(f'{ctx.author.display_name} hat clear ausgefürt.')
         await ctx.channel.purge(limit=amount+1)
 
 def setup(client):

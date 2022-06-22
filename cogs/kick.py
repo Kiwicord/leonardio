@@ -20,6 +20,7 @@ class Kick(commands.Cog):
             error = discord.Embed(color=0xE74C3C, title=f'Stop!', description=f'Du kannst {member.mention} nicht kicken! DU MONG DB')
             await ctx.send(embed=error)
             return
+        print(f'{ctx.author.display_name} hat kick ausgefürt.')
 
 def setup(client):
     client.add_cog(Kick(client))

@@ -46,6 +46,7 @@ class Report(commands.Cog):
 
             except Exception as e:
                 print(e)
+        print(f'{ctx.author.display_name} hat report ausgefürt.')
 
 def setup(client):
     client.add_cog(Report(client))

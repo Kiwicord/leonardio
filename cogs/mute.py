@@ -24,6 +24,7 @@ class Mute(commands.Cog):
             error = discord.Embed(color=0xE74C3C, title=f'Stop!', description=f'Du kannst {member.mention} nicht muten! DU MONG DB')
             await ctx.send(embed=error)
             return
+        print(f'{ctx.author.display_name} hat mute ausgefürt.')
     
     @commands.has_permissions(administrator=True)
     @commands.command()
@@ -41,6 +42,7 @@ class Mute(commands.Cog):
             error = discord.Embed(color=0xE74C3C, title=f'Stop!', description=f'Du kannst {member.mention} nicht unmuten! DU MONG DB')
             await ctx.send(embed=error)
             return
+        print(f'{ctx.author.display_name} hat unmute ausgefürt.')
         
 
 

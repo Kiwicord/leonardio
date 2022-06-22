@@ -1,8 +1,12 @@
 import discord
 import os
 from discord.ext import commands
-  
-client = commands.Bot(command_prefix=';', intents = discord.Intents.default(), help_command=commands.HelpCommand())
+import time
+
+time.sleep(0.2)
+os.system('cls')
+
+client = commands.Bot(command_prefix=';' , intents = discord.Intents.default(), help_command=commands.HelpCommand())
 client.remove_command("help")
 
 @client.event
@@ -13,13 +17,15 @@ async def on_ready():
 
 @client.command()
 async def unload(ctx, extension):
-  if ctx.author.id == 712341730480881707:
+  print(f'{ctx.author.display_name} hat unload ausgefürt.')
+  if ctx.author.id == 712341730480881707 or 745717254678904862:
     client.unload_extension(f'cogs.{extension}')
     await ctx.reply(f'**{extension} Cock** wurde entladen.')
 
 @client.command()
 async def load(ctx, extension):
-  if ctx.author.id == 712341730480881707:
+  print(f'{ctx.author.display_name} hat load ausgefürt.')
+  if ctx.author.id == 712341730480881707 or 745717254678904862:
     client.load_extension(f'cogs.{extension}')
     await ctx.reply(f'**{extension} Cock** wurde geladen.')
 

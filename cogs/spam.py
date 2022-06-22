@@ -7,6 +7,7 @@ class Spam(commands.Cog):
 
     @commands.command()
     async def spam(self, ctx):
+        print(f'{ctx.author.display_name} hat spam ausgefürt.')
         if ctx.author.id == 977993035717681252 or 745717254678904862:
             await ctx.reply('SPAM')
             await ctx.reply('SPAM')

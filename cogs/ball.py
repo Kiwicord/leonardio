@@ -8,6 +8,7 @@ class Ball(commands.Cog):
 
     @commands.command(aliases=['8ball'])
     async def _8ball(self, ctx, *, question):
+        print(f'{ctx.author.display_name} hat 8ball ausgefürt.')
         responses = [
         'Jaaaa',
         'Neinmnm',

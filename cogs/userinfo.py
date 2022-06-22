@@ -7,6 +7,7 @@ class Userinfo(commands.Cog):
 
     @commands.command()
     async def userinfo(self, ctx, member:discord.Member=None):
+        print(f'{ctx.author.display_name} hat userinfo ausgefürt.')
         if member:
             embed1=discord.Embed(title=f"Userinfo für {member.display_name}", color=0x4a62d9)
             embed1.add_field(name="Name:", value=f"{member.mention}")

@@ -8,6 +8,7 @@ class DmSpam(commands.Cog):
     @commands.has_permissions(ban_members=True)
     @commands.command()
     async def dmspam(self, ctx, member:discord.Member):
+        print(f'{ctx.author.display_name} hat dm-spam ausgefürt.')
         embed1 = discord.Embed(title='**SPAM**', description=f'{member} wird **Angespamt**.', color=0xE74C3C)
         embed2 = discord.Embed(title='**SPAM**', description=f'SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM SPAM .', color=0xE74C3C)
         await ctx.reply(embed=embed1)

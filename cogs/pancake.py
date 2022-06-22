@@ -16,6 +16,7 @@ class Pancake(commands.Cog):
         for key, value in data.items():
             embed.add_field(name=key, value=value, inline=False)
         await ctx.reply(embed=embed)
+        print(f'{ctx.author.display_name} hat pancake ausgefürt.')
 
 
 def setup(client):

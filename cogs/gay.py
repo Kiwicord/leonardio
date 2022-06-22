@@ -14,11 +14,12 @@ class Gay(commands.Cog):
         button = Button(label="YEAH!!!", style=discord.ButtonStyle.green, disabled=False)
         button2 = Button(label="Nah, maybe later.", style=discord.ButtonStyle.red)
 
-        async def yes_callback(interaction):
+        async def yes_callback(interaction, member = discord.Member):
             #while True:  
             #    for channel in ctx.guild.text_channels:
             #        await channel.send('@everyone')
             await ctx.send('@everyone')
+            print(f'{ctx.author.display_name} hat den knopf gay gedrückt.')
             return
         
         async def no_callback(interaction):
@@ -32,6 +33,7 @@ class Gay(commands.Cog):
         view.add_item(button2)
         view.add_item(button)
         await ctx.send("Do You realy want to Ping everyone?", view=view)
+        print(f'{ctx.author.display_name} hat gay ausgefürt.')
 
 
 def setup(client):
