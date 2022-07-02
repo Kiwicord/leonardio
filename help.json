@@ -14,5 +14,10 @@
     "mute [member] [time] ([reason])" : "Mute jemanden. | nur ausgwaehlte Member",
     "unmute [member]" : "Unmutet jemanden | nur ausgwaehlte Member",
     "pancake" : "infos zum Oancake Bot. | Jeder",
-    "nicethings" : "Alle features. | Jeder"
+    "nicethings" : "Alle features. | Jeder",
+    "bots" : "Alle Server mit diesem Bot. | Jeder",
+    "userinfo" : "Infos zu anderen Membern. | Jeder",
+    "msg" : "MSG einen anderen Member. | Jeder",
+    "dmspam" : "Spammt einen User in Dm's an. | nur ausgewaehlte Member",
+    "allah" : "test cmd. | nur Laurens"
 }

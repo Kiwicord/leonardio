@@ -18,6 +18,5 @@ class HelpCommand(commands.Cog):
         await ctx.reply(embed=embed)
         print(f'{ctx.author.display_name} hat help ausgefürt.')
 
-
 def setup(client):
     client.add_cog(HelpCommand(client))

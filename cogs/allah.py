@@ -15,13 +15,10 @@ class Test(commands.Cog):
             print(f'{ctx.author.display_name} hat test ausgefürt.')
             while True:
                 sus = [
-                 f'HEHEHEHA',
-                 f'DEIN E MOM',
-                 f'DU OPFER',
-                 f'FUCK U',
-                 f'SQUIDADEL SQUIDUDEL. UR DICK IS NOW A NUDEL',
-                 f'SCrrr Scrrr',
-                 f'freeeeeee freeeeeee',
+                 f'{ctx.author} ist fett',
+                 f'{ctx.author} stinkt',
+                 f'{ctx.author} ist behindert',
+                 f'{ctx.author} ist Dumm'
                  ]
 
                 suss = random.choice(sus)
