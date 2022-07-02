@@ -16,7 +16,7 @@ class Antrag(commands.Cog):
             await message.add_reaction('❌')
 
             def check(reaction, user):
-                return user == ctx.author and (str(reaction.emoji) == '❌')
+                return str (reaction.emoji) == '❌' and user != self.client.user
 
             try:
                 reaction, user = await self.client.wait_for('reaction_add', check=check)
