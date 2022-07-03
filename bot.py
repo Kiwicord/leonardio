@@ -2,9 +2,11 @@ import discord
 import os
 from discord.ext import commands
 import time
+from db import *
 
 time.sleep(0.2)
 os.system('cls')
+
 
 client = commands.Bot(command_prefix=';' , intents = discord.Intents.default(), help_command=commands.HelpCommand())
 client.remove_command("help")

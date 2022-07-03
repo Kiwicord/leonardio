@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 import random
+import pymongo
+from pymongo import MongoClient
 
 class Test(commands.Cog):
     def __init__(self, client):
@@ -12,19 +14,7 @@ class Test(commands.Cog):
             embed = discord.Embed(title= '', description= 'NOT ANY MORE', color=0xE74C3C)
             await ctx.send(embed=embed)
         else:
-            print(f'{ctx.author.display_name} hat test ausgefürt.')
-            while True:
-                sus = [
-                 f'{ctx.author} ist fett',
-                 f'{ctx.author} stinkt',
-                 f'{ctx.author} ist behindert',
-                 f'{ctx.author} ist Dumm'
-                 ]
-
-                suss = random.choice(sus)
-
-                embed2 = discord.Embed(title='', description=f'{suss}', color=0xE74C3C)
-                await ctx.send(embed=embed2)
-
+            print('sus')
+            
 def setup(client):
     client.add_cog(Test(client))
