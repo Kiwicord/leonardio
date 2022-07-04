@@ -28,7 +28,7 @@ class Deposit(commands.Cog):
             await ctx.reply(embed=embed_not_enough_money, mention_author=False)
             return
         
-        embed = discord.Embed(color=0xE74C3C, title='✨🧨 Überwiesen!', description=f'Du hast erfolgreich **{int(amount):,}**🥝 auf deine Bank überwiesen!')
+        embed = discord.Embed(color=0xE74C3C, title='✨🧨 Überwiesen!', description=f'Du hast erfolgreich **{int(amount):,}**🧨 auf deine Bank überwiesen!')
         await open_profile(ctx.author.id)
         await deposit_amt(ctx.author.id, amount=int(amount))
         await ctx.reply(embed=embed, mention_author=False)
