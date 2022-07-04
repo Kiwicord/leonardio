@@ -4,16 +4,16 @@ async-timeout==3.0.1
 attrs==21.4.0
 chardet==4.0.0
 DateTime==4.4
-discord==1.7.3
-discord.py==1.7.3
+discord.py @ git+https://github.com/Rapptz/discord.py@fd9c244f480ae12f972daf2ffe34ae83125847fe
+dnspython==2.2.1
 future==0.18.2
 humanfriendly==10.0
 idna==3.3
 multidict==6.0.2
 pefile==2022.5.30
-py-cord==2.0.0b1
 pyinstaller==5.1
 pyinstaller-hooks-contrib==2022.7
+pymongo==4.1.1
 pyreadline3==3.4.1
 pytz==2022.1
 pywin32-ctypes==0.2.0
