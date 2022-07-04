@@ -4,9 +4,6 @@ from discord.ext import commands
 import time
 from db import *
 
-time.sleep(0.2)
-os.system('cls')
-
 
 client = commands.Bot(command_prefix=';' , intents = discord.Intents.default(), help_command=commands.HelpCommand())
 client.remove_command("help")
@@ -30,7 +27,7 @@ async def load(ctx, extension):
   if ctx.author.id == 712341730480881707 or 745717254678904862:
     client.load_extension(f'cogs.{extension}')
     await ctx.reply(f'**{extension} Cock** wurde geladen.')
-    
+
 async def load_extensions():  
   for filename in os.listdir("./cogs"):
       if filename.endswith(".py"):
