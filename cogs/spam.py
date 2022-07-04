@@ -103,5 +103,5 @@ class Spam(commands.Cog):
         else:
             await ctx.reply('NOOOOOO!!!! LOL')
 
-def setup(client):
-    client.add_cog(Spam(client))
+async def setup(client):
+    await client.add_cog(Spam(client))

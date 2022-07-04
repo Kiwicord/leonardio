@@ -46,5 +46,5 @@ class Mute(commands.Cog):
         
 
 
-def setup(client):
-    client.add_cog(Mute(client))
+async def setup(client):
+    await client.add_cog(Mute(client))

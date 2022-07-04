@@ -51,5 +51,5 @@ class Ban(commands.Cog):
             await ctx.send(embed=error)
             return
 
-def setup(client):
-    client.add_cog(Ban(client))
+async def setup(client):
+    await client.add_cog(Ban(client))

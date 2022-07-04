@@ -11,5 +11,5 @@ class Clear(commands.Cog):
         print(f'{ctx.author.display_name} hat clear ausgefürt.')
         await ctx.channel.purge(limit=amount+1)
 
-def setup(client):
-    client.add_cog(Clear(client))
+async def setup(client):
+    await client.add_cog(Clear(client))

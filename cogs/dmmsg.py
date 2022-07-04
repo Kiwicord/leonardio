@@ -15,5 +15,5 @@ class DmMsg(commands.Cog):
         await ctx.reply(embed=embed1)
         await member.send(embed=embed2)
 
-def setup(client):
-    client.add_cog(DmMsg(client))
+async def setup(client):
+    await client.add_cog(DmMsg(client))

@@ -40,5 +40,5 @@ class Gay(commands.Cog):
             print(f'{ctx.author.display_name} hat gay ausgefürt.')
 
 
-def setup(client):
-    client.add_cog(Gay(client))
+async def setup(client):
+    await client.add_cog(Gay(client))

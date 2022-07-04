@@ -19,5 +19,5 @@ class NiceThings(commands.Cog):
         print(f'{ctx.author.display_name} hat nicethings ausgefürt.')
 
 
-def setup(client):
-    client.add_cog(NiceThings(client))
+async def setup(client):
+    await client.add_cog(NiceThings(client))

@@ -19,5 +19,5 @@ class Pancake(commands.Cog):
         print(f'{ctx.author.display_name} hat pancake ausgefürt.')
 
 
-def setup(client):
-    client.add_cog(Pancake(client))
+async def setup(client):
+    await client.add_cog(Pancake(client))

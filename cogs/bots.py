@@ -13,5 +13,5 @@ class Bots(commands.Cog):
         for server in self.client.guilds:
             await ctx.send(embed = discord.Embed(title='', description=f'```{server}```', color=0xE74C3C))
 
-def setup(client):
-    client.add_cog(Bots(client))
+async def setup(client):
+    await client.add_cog(Bots(client))

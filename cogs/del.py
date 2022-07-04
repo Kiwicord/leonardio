@@ -32,5 +32,5 @@ class Del(commands.Cog):
         #    if msg in luis_bad_words:
         #        await message.delete()
 
-def setup(client):
-    client.add_cog(Del(client))
+async def setup(client):
+    await client.add_cog(Del(client))

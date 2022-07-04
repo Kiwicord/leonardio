@@ -12,5 +12,5 @@ class CommandErrorHandler(commands.Cog):
         embed.set_footer(text="Um den Fehler zu reporten, wende dich bitte an das Serverteam.")
         await ctx.reply(embed=embed, mention_author=False)
 
-def setup(client):
-    client.add_cog(CommandErrorHandler(client)) 
+async def setup(client):
+    await client.add_cog(CommandErrorHandler(client)) 

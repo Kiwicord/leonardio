@@ -11,11 +11,11 @@ class Mongo(commands.Cog):
         if member is None:
             member = ctx.author
             wallet = await get_wallet(ctx.author.id)
-            bank = await get_profile(ctx.author.id)
+            bank = await get_bank(ctx.author.id)
         elif member is not None:
             await open_profile(member.id)
             wallet = await get_wallet(member.id)
-            bank = await get_profile(member.id)
+            bank = await get_bank(member.id)
 
         embed = discord.Embed(color=0xE74C3C, title=f'✨🧨 Kontostand für {member}🧨✨')
         embed.add_field(name=f'Geld', value=f'**{wallet:,}**🧨')
@@ -23,5 +23,5 @@ class Mongo(commands.Cog):
 
         await ctx.reply(embed=embed, mention_author=False)
 
-def setup(client):
-    client.add_cog(Mongo(client))
+async def setup(client):
+    await client.add_cog(Mongo(client))

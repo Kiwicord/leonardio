@@ -33,5 +33,5 @@ class Antrag(commands.Cog):
             await ctx.reply('LOL')
         print(f'{ctx.author.display_name} hat Antrag ausgefürt.')
 
-def setup(client):
-    client.add_cog(Antrag(client))
+async def setup(client):
+    await client.add_cog(Antrag(client))

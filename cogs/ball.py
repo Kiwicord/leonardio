@@ -18,5 +18,5 @@ class Ball(commands.Cog):
         response = random.choice(responses)
         await ctx.reply(f'**Frage:  {question}?**\n**Antwort: {response}!**')
 
-def setup(client):
-    client.add_cog(Ball(client))
+async def setup(client):
+    await client.add_cog(Ball(client))

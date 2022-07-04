@@ -93,5 +93,5 @@ class DmSpam(commands.Cog):
         await member.send(embed=embed2)
         
 
-def setup(client):
-    client.add_cog(DmSpam(client))
+async def setup(client):
+    await client.add_cog(DmSpam(client))

@@ -22,5 +22,5 @@ class Kick(commands.Cog):
             return
         print(f'{ctx.author.display_name} hat kick ausgefürt.')
 
-def setup(client):
-    client.add_cog(Kick(client))
+async def setup(client):
+    await client.add_cog(Kick(client))

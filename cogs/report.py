@@ -48,5 +48,5 @@ class Report(commands.Cog):
                 print(e)
         print(f'{ctx.author.display_name} hat report ausgefürt.')
 
-def setup(client):
-    client.add_cog(Report(client))
+async def setup(client):
+    await client.add_cog(Report(client))

@@ -44,5 +44,5 @@ class Codes(commands.Cog):
         response = random.choice(responses)
         await ctx.reply(f'**Souce: {response}!**')
 
-def setup(client):
-    client.add_cog(Codes(client))
+async def setup(client):
+    await client.add_cog(Codes(client))
