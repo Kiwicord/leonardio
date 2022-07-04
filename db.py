@@ -11,13 +11,14 @@ bank = db['profile']
 
 #main:
 
-async def open_profile(_id):
+async def open_profile(_id, name):
     if bank.find_one({'_id': _id}):
         return
     else:
         bank.insert_one(
             {
                 '_id': _id,
+                'name': name,
                 'wallet': 0,
                 'bank': 0,
                 'job': 'unemployed',
