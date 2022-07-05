@@ -21,12 +21,12 @@ class GooglePlayCardGenerator(commands.Cog):
         button25 = Button(label='25 Euro', emoji='🎫', style=discord.ButtonStyle.green)
         button50 = Button(label='50 Euro', emoji='🎫', style=discord.ButtonStyle.green)
 
-        embed = discord.Embed(color=0x77dd77, title='🎫 Google Play Karten Generator', description='Bitte wähle das Guthaben aus, um deine Google Play Karte zu erstellen.')
+        embed = discord.Embed(color=0xE74C3C, title='🎫 Google Play Karten Generator', description='Bitte wähle das Guthaben aus, um deine Google Play Karte zu erstellen.')
         embed.set_thumbnail(url='https://lh3.googleusercontent.com/k-2BsI5KgLC2JxQd2rFA-3RHg8-tvoXjinZFNvZLnGlbcxR8xkVM9GW3tqBK5xbTSJKr3-Ei2SVuDoAuYaR3-AL5DVlV5vNj10d6x-604UYNa0sfGEU=s0')
         
         async def callback_5(interaction):
             button5.disabled = True
-            embed1 = discord.Embed(color=0x77dd77, title='🎫 Deine 5 Euro Google Play Karte:', description=random.choice(SERIAL))
+            embed1 = discord.Embed(color=0xE74C3C, title='🎫 Deine 5 Euro Google Play Karte:', description=random.choice(SERIAL))
             embed1.set_thumbnail(url='https://lh3.googleusercontent.com/k-2BsI5KgLC2JxQd2rFA-3RHg8-tvoXjinZFNvZLnGlbcxR8xkVM9GW3tqBK5xbTSJKr3-Ei2SVuDoAuYaR3-AL5DVlV5vNj10d6x-604UYNa0sfGEU=s0')
             await interaction.response.send_message(embed=embed1, ephemeral=True)
             await msg.edit(view=view)
@@ -35,7 +35,7 @@ class GooglePlayCardGenerator(commands.Cog):
 
         async def callback_15(interaction):
             button15.disabled = True
-            embed1 = discord.Embed(color=0x77dd77, title='🎫 Deine 15 Euro Google Play Karte:', description=random.choice(SERIAL))
+            embed1 = discord.Embed(color=0xE74C3C, title='🎫 Deine 15 Euro Google Play Karte:', description=random.choice(SERIAL))
             embed1.set_thumbnail(url='https://lh3.googleusercontent.com/k-2BsI5KgLC2JxQd2rFA-3RHg8-tvoXjinZFNvZLnGlbcxR8xkVM9GW3tqBK5xbTSJKr3-Ei2SVuDoAuYaR3-AL5DVlV5vNj10d6x-604UYNa0sfGEU=s0')
             await interaction.response.send_message(embed=embed1, ephemeral=True)
             await msg.edit(view=view)
@@ -43,7 +43,7 @@ class GooglePlayCardGenerator(commands.Cog):
 
         async def callback_25(interaction):
             button25.disabled = True
-            embed1 = discord.Embed(color=0x77dd77, title='🎫 Deine 25 Euro Google Play Karte:', description=random.choice(SERIAL))
+            embed1 = discord.Embed(color=0xE74C3C, title='🎫 Deine 25 Euro Google Play Karte:', description=random.choice(SERIAL))
             embed1.set_thumbnail(url='https://lh3.googleusercontent.com/k-2BsI5KgLC2JxQd2rFA-3RHg8-tvoXjinZFNvZLnGlbcxR8xkVM9GW3tqBK5xbTSJKr3-Ei2SVuDoAuYaR3-AL5DVlV5vNj10d6x-604UYNa0sfGEU=s0')
             await interaction.response.send_message(embed=embed1, ephemeral=True)
             await msg.edit(view=view)
@@ -51,7 +51,7 @@ class GooglePlayCardGenerator(commands.Cog):
 
         async def callback_50(interaction):
             button50.disabled = True
-            embed1 = discord.Embed(color=0x77dd77, title='🎫 Deine 50 Euro Google Play Karte:', description=random.choice(SERIAL))
+            embed1 = discord.Embed(color=0xE74C3C, title='🎫 Deine 50 Euro Google Play Karte:', description=random.choice(SERIAL))
             embed1.set_thumbnail(url='https://lh3.googleusercontent.com/k-2BsI5KgLC2JxQd2rFA-3RHg8-tvoXjinZFNvZLnGlbcxR8xkVM9GW3tqBK5xbTSJKr3-Ei2SVuDoAuYaR3-AL5DVlV5vNj10d6x-604UYNa0sfGEU=s0')
             await interaction.response.send_message(embed=embed1, ephemeral=True)
             await msg.edit(view=view)
