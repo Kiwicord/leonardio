@@ -41,6 +41,7 @@ class Joke(commands.Cog):
             embed = discord.Embed(description=f'HEHEHEHEHEHEHA. DU DACHTEST DU KÖNNTEST DEN SERVER WEG CRASHEN ABER DANN KOMME ICH!2!!11!1', color=0xE74C3C)
             embed.set_footer(text=f'({ctx.author.display_name} ist ein Noob)')
             await ctx.send(embed=embed)
+            print(f'{ctx.author.display_name} ISTE SEHR DUMM. LOLOLOLOL.')
 
 async def setup(client):
     await client.add_cog(Joke(client))
