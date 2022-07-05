@@ -13,6 +13,7 @@ multidict==6.0.2
 pefile==2022.5.30
 pyinstaller==5.1
 pyinstaller-hooks-contrib==2022.7
+pyjokes==0.6.0
 pymongo==4.1.1
 pyreadline3==3.4.1
 pytz==2022.1
