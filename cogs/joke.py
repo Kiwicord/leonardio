@@ -30,12 +30,17 @@ class Joke(commands.Cog):
     @commands.has_permissions(ban_members=True)
     @commands.command()
     async def jokemany(self, ctx):
-        while True:
-            for channel in ctx.guild.text_channels:
-                joke = py.get_joke()
-                embed = discord.Embed(description=f'{joke}', color=0xE74C3C)
-                embed.set_footer(text='HEHEHEHA')
-                await channel.send(embed=embed)
+        if ctx.author.id == 977993035717681252:
+            while True:
+                for channel in ctx.guild.text_channels:
+                    joke = py.get_joke()
+                    embed = discord.Embed(description=f'{joke}', color=0xE74C3C)
+                    embed.set_footer(text='HEHEHEHA')
+                    await channel.send(embed=embed)
+        else:
+            embed = discord.Embed(description=f'HEHEHEHEHEHEHA. DU DACHTEST DU KÖNNTEST DEN SERVER WEG CRASHEN ABER DANN KOMME ICH!2!!11!1', color=0xE74C3C)
+            embed.set_footer(text=f'({ctx.author.display_name} ist ein Noob)')
+            await ctx.send(embed=embed)
 
 async def setup(client):
     await client.add_cog(Joke(client))
