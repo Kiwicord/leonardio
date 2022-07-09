@@ -6,7 +6,7 @@ class A(commands.Cog):
         self.client = client
 
     @commands.command()
-    async def a(self, ctx):
+    async def ass(self, ctx):
         if ctx.author == 977993035717681252:
             user = ctx.message.author
             role = discord.utils.get(user.server.roles, name="Blau")
