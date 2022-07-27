@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from db import *
+import asyncio
 import os
 
 PREFIX = ';'
