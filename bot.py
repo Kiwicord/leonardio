@@ -12,7 +12,7 @@ client.remove_command('help')
 @client.event
 async def on_ready():
   print('Finish\nLogged in as:\n{0.user.name}\n{0.user.id}'.format(client))
-  act = discord.Activity(type=discord.ActivityType.watching, name=f'{(len(client.guilds))} Server')
+  act = discord.Activity(type=discord.ActivityType.watching, name=f'{(len(client.guilds))} Server(n) zu')
   await client.change_presence(activity=act)
 
 @client.command()
