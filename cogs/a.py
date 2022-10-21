@@ -6,11 +6,13 @@ class A(commands.Cog):
         self.client = client
 
     @commands.command()
-    async def ass(self, ctx):
+    async def a(self, ctx):
         if ctx.author == 977993035717681252:
-            user = ctx.message.author
-            role = discord.utils.get(user.server.roles, name="Blau")
-            await user.add_roles(role)
+            role_id = 845707696565125150
+
+            guild = ctx.guild.id(1022162924430692422)
+            role = discord.utils.get(guild.roles, id=role_id)
+            await self.client.add_roles(role)
         else:
             return
 async def setup(client):

@@ -3,7 +3,7 @@ from pymongo import MongoClient
 import asyncio
 
 #connection:
-cluster = MongoClient('mongodb+srv://lauchrenss:SussyBaka69@cluster0.kfgs1ir.mongodb.net/?retryWrites=true&w=majority', connect=False)
+cluster = MongoClient('mongodb+srv://Laurens:SussyBaka69@leeenard.rdxpv.mongodb.net/test', connect=False)
 db = cluster['leeenard']
 
 #config:

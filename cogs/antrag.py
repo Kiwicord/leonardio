@@ -6,7 +6,7 @@ class Antrag(commands.Cog):
         self.client = client
 
     @commands.command()
-    async def a(self, ctx, *, sus=None):
+    async def asay(self, ctx, *, sus=None):
         if ctx.author.id == 745717254678904862 or 977993035717681252 or 941277767453016104:
             embed = discord.Embed(title= '**Abstimmung**', description= f'{ctx.author} möchte einen Abstimmung machen:', color=0xE74C3C)
             embed.add_field(name= 'Name:', value=f'{sus}')

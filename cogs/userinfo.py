@@ -27,5 +27,6 @@ class Userinfo(commands.Cog):
             embed2.add_field(name="Discord beigetreten:", value=f"{ctx.author.created_at}")
             embed2.add_field(name="Rollen:", value=f"{len(ctx.author.roles)-1}")
             await ctx.send(embed=embed2)
+
 async def setup(client):
     await client.add_cog(Userinfo(client))

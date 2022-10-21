@@ -28,7 +28,7 @@ class Mute(commands.Cog):
     
     @commands.has_permissions(administrator=True)
     @commands.command()
-    async def unmute(self, ctx, member : discord.Member=None, time=None):
+    async def unmute(self, ctx, member : discord.Member=None):
 
         if member:
             guild = ctx.guild
